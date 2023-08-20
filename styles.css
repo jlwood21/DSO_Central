@@ -1,88 +1,90 @@
 /* General Styles */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #2c3e50;
-    background-color: #ecf0f1;
-    margin: 0;
-    padding: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #ecf0f1;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 /* Header Styles */
 header {
-    background: #2980b9;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+  background: #2980b9;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
 header a {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    transition: color 0.3s;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
 header ul {
-    padding: 0;
-    list-style-type: none;
+  padding: 0;
+  list-style-type: none;
 }
 
 header li {
-    display: inline-block;
-    margin: 0 15px;
+  display: inline-block;
+  margin: 0 15px;
 }
 
 header nav {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-header .highlight, header .current a {
-    color: #e74c3c;
+header .highlight,
+header .current a {
+  color: #e74c3c;
 }
 
 header a:hover {
-    color: #e74c3c;
+  color: #e74c3c;
 }
 
 /* Main Content Styles */
 main {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 main .box {
-    background: #ffffff;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
 }
 
 main .box:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer Styles */
 footer {
-    background: #34495e;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+  background: #34495e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    header nav, main .box {
-        text-align: center;
-    }
+  header nav,
+  main .box {
+    text-align: center;
+  }
 }
