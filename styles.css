@@ -88,3 +88,8 @@ footer {
     text-align: center;
   }
 }
+
+#logo {
+  font-size: 3em; /* You can adjust this value as needed */
+  /* Other styles */
+}
