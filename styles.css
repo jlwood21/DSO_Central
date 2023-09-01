@@ -1,15 +1,15 @@
 /* General Styles */
 body {
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 /* Header Styles */
 .modern-header {
-  background: linear-gradient(to right, #333, teal);
+  background: linear-gradient(to right, #333, #007d7d);
   color: white;
   text-align: center;
   padding: 1em;
@@ -25,6 +25,8 @@ main {
 
 .center-content {
   text-align: center;
+  margin: auto;
+  max-width: 800px;
 }
 
 /* 3D Image Centering */
@@ -37,7 +39,7 @@ main {
 
 /* Footer Styles */
 .modern-footer {
-  background: linear-gradient(to right, #333, teal);
+  background: linear-gradient(to right, #333, #007d7d);
   color: white;
   text-align: center;
   padding: 1em;
@@ -48,7 +50,7 @@ main {
 
 /* CTA Button */
 .cta-button {
-  background-color: teal;
+  background-color: #007d7d;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -56,5 +58,5 @@ main {
 }
 
 .cta-button:hover {
-  background-color: #007d7d;
+  background-color: #005959;
 }
