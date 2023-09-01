@@ -1,64 +1,37 @@
-// Initialize scene, camera, and renderer
+// Initialize the scene, camera, and renderer
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000,
-);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer();
 
-// Set renderer size and append to container
-renderer.setSize(window.innerWidth, window.innerHeight);
-document
-  .getElementById("threeD-pipeline-container")
-  .appendChild(renderer.domElement);
+// Get the container element and set renderer size
+const container = document.getElementById('threeD-pipeline-container');
+renderer.setSize(container.offsetWidth, container.offsetHeight);
 
-// Create pipeline components
-function createPipeline() {
-  const materials = [
-    new THREE.MeshBasicMaterial({ color: 0xff0000 }),
-    new THREE.MeshBasicMaterial({ color: 0x00ff00 }),
-    new THREE.MeshBasicMaterial({ color: 0x0000ff }),
-  ];
+// Attach the renderer to the container
+container.appendChild(renderer.domElement);
 
-  const group = new THREE.Group();
+// Create a geometry and material
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 
-  for (let i = 0; i < 3; i++) {
-    // Create cylinder to represent a pipeline stage
-    const cylinderGeometry = new THREE.CylinderGeometry(5, 5, 20, 32);
-    const cylinder = new THREE.Mesh(cylinderGeometry, materials[i]);
-    cylinder.position.set(i * 30, 0, 0);
-    group.add(cylinder);
+// Create a mesh and add it to the scene
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
 
-    if (i < 2) {
-      // Create sphere to represent a transition or action
-      const sphereGeometry = new THREE.SphereGeometry(5, 32, 32);
-      const sphere = new THREE.Mesh(sphereGeometry, materials[i]);
-      sphere.position.set(i * 30 + 15, 0, 0);
-      group.add(sphere);
-    }
-  }
+// Position the camera
+camera.position.z = 5;
 
-  return group;
-}
-
-// Add pipeline to scene
-const pipeline = createPipeline();
-scene.add(pipeline);
-
-// Camera position
-camera.position.z = 100;
-
-// Animation
-function animate() {
+// Animation loop
+const animate = () => {
   requestAnimationFrame(animate);
 
-  pipeline.rotation.x += 0.01;
-  pipeline.rotation.y += 0.01;
+  // Rotate the cube
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
 
+  // Render the scene with the camera
   renderer.render(scene, camera);
-}
+};
 
-// Execute animation
+// Start the animation
 animate();
