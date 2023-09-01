@@ -1,135 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="styles.css" rel="stylesheet"/>
-<title>Threat Modeling: An Overview</title>
-</head>
-<body>
-<header>
-<h1>DevSecOps Central</h1>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About DevSecOps</a></li>
-<li><a href="best-practices.html">Best Practices</a></li>
-<li><a href="tools.html">Tools &amp; Technologies</a></li>
-<li><a href="case-studies.html">Case Studies</a></li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<h1>Threat Modeling: An Overview</h1>
-<section id="introduction">
-<p>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Threat Modeling: An Overview</title>
+  </head>
+  <body>
+    <header>
+      <h1>DevSecOps Central</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About DevSecOps</a></li>
+          <li><a href="best-practices.html">Best Practices</a></li>
+          <li><a href="tools.html">Tools &amp; Technologies</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Threat Modeling: An Overview</h1>
+      <section id="introduction">
+        <p>
           Threat modeling is a systematic approach used to identify, quantify,
           and address the security risks associated with an application. It's a
           proactive measure that allows teams to understand the potential
           threats and vulnerabilities in the system and design countermeasures
           to mitigate them.
         </p>
-</section>
-<section id="identifying-threats">
-<h2>1. Identifying Threats</h2>
-<h3>A. Asset Identification</h3>
-<p>
+      </section>
+      <section id="identifying-threats">
+        <h2>1. Identifying Threats</h2>
+        <h3>A. Asset Identification</h3>
+        <p>
           The first step is to identify the assets that need protection. Assets
           can be data, systems, or any valuable component.
         </p>
-<h3>B. Threat Agents</h3>
-<p>
+        <h3>B. Threat Agents</h3>
+        <p>
           Identify who might want to attack the system. Threat agents can be
           internal or external entities.
         </p>
-<h3>C. Threat Vectors</h3>
-<p>
+        <h3>C. Threat Vectors</h3>
+        <p>
           These are the paths or means by which a threat agent can reach an
           asset.
         </p>
-</section>
-<section id="threat-quantification">
-<h2>2. Threat Quantification</h2>
-<h3>A. Risk Assessment</h3>
-<p>
+      </section>
+      <section id="threat-quantification">
+        <h2>2. Threat Quantification</h2>
+        <h3>A. Risk Assessment</h3>
+        <p>
           The risk associated with each threat can be quantified using
           mathematical expressions:
         </p>
-<pre>R=P×I</pre>
-<p>Where:</p>
-<ul>
-<li>R: Risk</li>
-<li>P: Probability of the threat occurring</li>
-<li>I: Impact of the threat</li>
-</ul>
-<h3>B. STRIDE Methodology</h3>
-<p>STRIDE is a popular model used to categorize threats:</p>
-<ul>
-<li>S: Spoofing</li>
-<li>T: Tampering</li>
-<li>R: Repudiation</li>
-<li>I: Information Disclosure</li>
-<li>D: Denial of Service</li>
-<li>E: Elevation of Privilege</li>
-</ul>
-</section>
-<section id="designing-countermeasures">
-<h2>3. Designing Countermeasures</h2>
-<h3>A. Security Controls</h3>
-<p>
+        <pre>R=P×I</pre>
+        <p>Where:</p>
+        <ul>
+          <li>R: Risk</li>
+          <li>P: Probability of the threat occurring</li>
+          <li>I: Impact of the threat</li>
+        </ul>
+        <h3>B. STRIDE Methodology</h3>
+        <p>STRIDE is a popular model used to categorize threats:</p>
+        <ul>
+          <li>S: Spoofing</li>
+          <li>T: Tampering</li>
+          <li>R: Repudiation</li>
+          <li>I: Information Disclosure</li>
+          <li>D: Denial of Service</li>
+          <li>E: Elevation of Privilege</li>
+        </ul>
+      </section>
+      <section id="designing-countermeasures">
+        <h2>3. Designing Countermeasures</h2>
+        <h3>A. Security Controls</h3>
+        <p>
           Implementing security controls to mitigate identified threats. These
           can be:
         </p>
-<ul>
-<li>Preventive Controls</li>
-<li>Detective Controls</li>
-<li>Corrective Controls</li>
-</ul>
-<h3>B. Security Policies</h3>
-<p>
+        <ul>
+          <li>Preventive Controls</li>
+          <li>Detective Controls</li>
+          <li>Corrective Controls</li>
+        </ul>
+        <h3>B. Security Policies</h3>
+        <p>
           Developing and enforcing security policies that align with the
           identified threats.
         </p>
-</section>
-<section id="examples-and-use-cases">
-<h2>4. Examples and Use Cases</h2>
-<h3>A. E-Commerce Platform</h3>
-<p>
+      </section>
+      <section id="examples-and-use-cases">
+        <h2>4. Examples and Use Cases</h2>
+        <h3>A. E-Commerce Platform</h3>
+        <p>
           For an e-commerce platform, threat modeling might identify threats
           like SQL injection, CSRF attacks, etc. Countermeasures might include
           input validation, using prepared statements, etc.
         </p>
-<h3>B. Banking Application</h3>
-<p>
+        <h3>B. Banking Application</h3>
+        <p>
           In a banking application, threats like unauthorized access, data
           leakage might be identified. Countermeasures might include
           multi-factor authentication, encryption, etc.
         </p>
-</section>
-<section id="continuous-monitoring">
-<h2>5. Continuous Monitoring and Improvement</h2>
-<p>
+      </section>
+      <section id="continuous-monitoring">
+        <h2>5. Continuous Monitoring and Improvement</h2>
+        <p>
           Threat modeling is not a one-time activity. Continuous monitoring and
           updating the threat model are essential to adapt to the evolving
           threat landscape.
         </p>
-</section>
-<section id="conclusion">
-<h2>Conclusion</h2>
-<p>
+      </section>
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
           Threat modeling is a vital practice in DevSecOps that enables teams to
           be proactive rather than reactive in their security efforts. By
           understanding the threat landscape, identifying potential threats,
           quantifying them, and designing appropriate countermeasures,
           organizations can build more secure applications.
         </p>
-</section>
-</main>
-<footer>
-<p>© 2023 DevSecOps Central. All rights reserved.</p>
-</footer>
-</body>
+      </section>
+    </main>
+    <footer>
+      <p>© 2023 DevSecOps Central. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
