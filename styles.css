@@ -1,51 +1,117 @@
-/* General Styles */
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+/* Reset default browser styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  box-sizing: border-box;
 }
 
-/* Header Styles */
-.modern-header {
-  background: linear-gradient(to right, #333, #007d7d);
-  color: white;
+/* Set default font, background, and text alignment */
+body {
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  background-color: #000;
+  line-height: 1.6;
   text-align: center;
-  padding: 1em;
-  position: fixed;
-  width: 100%;
 }
 
-/* Main Content Styles */
+/* Header styles */
+header {
+  background-color: #FAFAFA;
+  border-bottom: 1px solid #EAEAEA;
+  padding: 20px 0;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+nav ul li a.active, nav ul li a:hover {
+  color: #e31255;
+}
+
+/* Main content styles */
 main {
-  padding: 20px;
-  margin-top: 60px;
-}
-
-.center-content {
-  text-align: center;
-  margin: auto;
   max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* 3D Image Centering */
-#threeD-pipeline-container {
-  background-color: transparent;
-  width: 50%;
-  height: 50%;
-  margin: auto;
+/* Section styles */
+section {
+  margin-bottom: 40px;
 }
 
-/* Footer Styles */
-.modern-footer {
-  background: linear-gradient(to right, #333, #007d7d);
-  color: white;
+/* Footer styles */
+footer {
   text-align: center;
-  padding: 1em;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  padding: 20px 0;
+  font-size: 0.8em;
+  background-color: #FAFAFA;
+  border-top: 1px solid #EAEAEA;
+}
+
+/* Typography for headings */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Images and multimedia */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .featured-section, .news-articles {
+    flex-direction: column;
+  }
+}
+
+/* Interactivity */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Additional styles for The Verge-like aesthetic */
+/* Layout */
+.featured-section, .news-articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Color Scheme */
+nav ul li a {
+  color: #fff;
+}
+
+nav ul li a.active, nav ul li a:hover {
+  color: #e31255;
+}
+
+/* Utility classes */
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.hidden {
+  display: none;
 }
 
 /* CTA Button */
@@ -59,4 +125,12 @@ main {
 
 .cta-button:hover {
   background-color: #005959;
+}
+
+/* 3D Image Centering */
+#threeD-pipeline-container {
+  background-color: transparent;
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }
