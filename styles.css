@@ -5,33 +5,36 @@
   box-sizing: border-box;
 }
 
-/* Typography */
+/* Typography - Inspired by The Verge's clean and modern font choices */
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f4f4f4;
-  padding-top: 80px; /* Adjusted padding to account for fixed header */
+  padding-top: 100px; /* Increased padding to ensure content is not cut off by the header */
 }
 
-/* Header */
+/* Header - Make it similar to The Verge's sticky header */
 header {
-  background: #fff;
+  background: #fcfcfc; /* Light background for the header */
   color: #333;
-  padding: 20px 0;
+  padding: 10px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 3px solid #f0f0f0; /* Subtle border for a slight shadow effect */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
 }
 
-/* Navigation */
+/* Navigation - Centered like The Verge's navigation */
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
+  max-width: 1140px;
+  margin: 0 auto; /* Center the navigation */
 }
 
 nav ul {
@@ -40,7 +43,7 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 15px;
+  margin: 0 20px; /* More space between navigation items */
 }
 
 nav ul li a {
@@ -54,14 +57,14 @@ nav ul li a:hover {
   color: #007bff;
 }
 
-/* Main Content Area */
+/* Main Content Area - More padding for a cleaner look */
 main {
   max-width: 1140px;
-  margin: 80px auto 0; /* Added top margin to push content below fixed header */
-  padding: 0 15px;
+  margin: 120px auto 0; /* Increased top margin to push content below fixed header */
+  padding: 0 20px; /* More horizontal padding for better text positioning */
 }
 
-/* Footer */
+/* Footer - Keeping it simple and clean */
 footer {
   background: #333;
   color: #f4f4f4;
@@ -72,14 +75,14 @@ footer {
   width: 100%;
 }
 
-/* Typography Headings */
+/* Typography Headings - Bolder and more pronounced for better visual hierarchy */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 20px;
   color: #333;
 }
 
-/* Links */
+/* Links - Underline on hover for better user interaction feedback */
 a {
   color: #007bff;
   text-decoration: none;
@@ -89,13 +92,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Buttons */
+/* Buttons - Rounded corners for a more modern look */
 button, .btn {
   background: #007bff;
   color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 50px; /* Rounded corners */
   cursor: pointer;
   font-size: 1em;
 }
@@ -104,13 +107,13 @@ button:hover, .btn:hover {
   background: #0056b3;
 }
 
-/* Images */
+/* Images - Ensure they are responsive */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Utility Classes */
+/* Utility Classes - For quick layout adjustments */
 .container {
   padding: 0 15px;
 }
@@ -119,7 +122,7 @@ img {
   text-align: center;
 }
 
-/* Media Queries */
+/* Media Queries - For responsive adjustments */
 @media (max-width: 768px) {
   nav ul {
     padding-top: 20px;
@@ -143,5 +146,5 @@ img {
   }
 }
 
-/* Custom Styles */
+/* Custom Styles - Specific to the site's unique elements */
 /* Add any custom styles for specific elements here based on the site's unique classes and IDs */
