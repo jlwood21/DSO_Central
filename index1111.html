@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>DSO Central - Home</title>
+  <link href="styles.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="bg-blue-100">
+  <!-- Header Section -->
+  <header class="bg-blue-600 text-white fixed w-full z-10 top-0">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl">DSO Central</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="text-white hover:text-yellow-300">Home</a></li>
+          <li><a href="about.html" class="text-white hover:text-yellow-300">About DSO</a></li>
+          <li><a href="best-practices.html" class="text-white hover:text-yellow-300">Best Practices</a></li>
+          <li><a href="tools.html" class="text-white hover:text-yellow-300">Tools &amp; Technologies</a></li>
+          <li><a href="case-studies.html" class="text-white hover:text-yellow-300">Case Studies</a></li>
+          <li><a href="blog.html" class="text-white hover:text-yellow-300">Blog</a></li>
+          <li><a href="contact.html" class="text-white hover:text-yellow-300">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main class="container mx-auto mt-24 p-4">
+    <section id="homepage-content" class="text-center">
+      <h1 class="text-4xl font-bold mb-4">Welcome to DSO Central</h1>
+      <div id="threeD-pipeline-container" class="bg-green-300 w-full h-96 my-8"></div>
+      <p class="mb-8">Your go-to resource for integrating security into your DevOps process.</p>
+      <div class="flex justify-center space-x-4">
+        <a class="cta-button" href="tool-selection.html">Use the DSO Tool Selection Tool</a>
+        <a class="cta-button" href="about.html">Learn About DSO</a>
+      </div>
+    </section>
+  </main>
+  <!-- Footer Section -->
+  <footer class="bg-blue-600 text-white text-center p-4 mt-8">
+    <div id="social-media" class="flex justify-center space-x-4 mb-2">
+      <a href="#"><img alt="Facebook" src="facebook-icon.png" /></a>
+      <a href="#"><img alt="Twitter" src="twitter-icon.png" /></a>
+      <a href="#"><img alt="LinkedIn" src="linkedin-icon.png" /></a>
+    </div>
+    <p>© 2023 DSO Central. All rights reserved.</p>
+  </footer>
+  <script src="3D-pipeline.js"></script>
+</body>
+</html>

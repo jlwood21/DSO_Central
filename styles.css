@@ -1,169 +1,126 @@
 /* Reset default browser styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Set default font and background */
-body {
-  font-family: 'Arial', sans-serif; /* Updated font family */
-  color: #333;
-  background-color: #f5f5f5;
-  line-height: 1.6;
-  padding-top: 80px;
-  text-align: center;
-}
-
-/* Header styles */
-header {
-  background-color: #4A90E2; /* Updated background color */
-  color: #fff;
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-/* Navigation styles */
-nav ul {
-  list-style: none;
-  text-align: center;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #FFFFFF; /* Updated color for better contrast */
-  font-size: 1.2em;
-}
-
-nav ul li a.active, nav ul li a:hover {
-  color: #FFD700; /* Updated hover color */
-}
-
-/* Main styles */
-main {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* Section styles */
-section {
-  margin-bottom: 40px;
-}
-
-/* Footer styles */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.8em;
-  background-color: #4A90E2; /* Updated background color */
-  color: #fff;
-}
-
-/* Utility classes */
-.clearfix::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Navigation Link Transitions */
-.nav-link {
-  transition: color 0.3s ease, font-size 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #FFD700; /* Updated hover color */
-  font-size: 1.1em; /* Slightly increase font size on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set default font and background */
   body {
-    padding: 15px; /* Adjusted padding for smaller screens */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
   }
-
-  header, footer {
-    padding: 20px 10px; /* Adjusted header and footer padding */
+  
+  /* Header styles */
+  header {
+    background-color: #4A90E2;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center; /* Center the header content */
+    z-index: 1000;
   }
-
-  .nav-link {
-    font-size: 1em; /* Adjusted font size for navigation links */
+  
+  /* Navigation styles */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Center the navigation menu */
   }
-
-  main {
-    padding: 10px; /* Adjusted main content padding */
-  }
-
-  h1, h2, h3 {
-    font-size: 1.5em; /* Adjusted font sizes for headers */
-  }
-
+  
   nav ul li {
-    display: block;
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+  }
+  
+  nav ul li a:hover {
+    color: #FFD700;
+  }
+  
+  /* Main styles */
+  main {
+    padding-top: 100px; /* Give enough space for the fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 160px); /* Adjust min-height to account for header and footer */
+  }
+  
+  /* Section styles */
+  #threeD-pipeline-container {
+    width: 50%;
+    height: 200px; /* Height can be adjusted */
+    background-color: #e6e6e6; /* Placeholder color for the 3D container */
+    margin: 20px 0;
+  }
+  
+  /* Call-to-Action Button styles */
+  .cta-button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #357ABD; /* Darker shade for hover effect */
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #4A90E2;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  #social-media {
     margin: 10px 0;
   }
-}
-
-/* Button Hover Effects */
-.cta-button {
-  background-color: #4A90E2;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #3a78c3; /* Darker shade on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-/* Link Transitions */
-a {
-  color: #4A90E2;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #3a78c3; /* Darker shade on hover */
-}
-
-/* Additional Interactive Elements */
-/* Example: Tooltip */
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+  
+  #social-media a img {
+    height: 20px; /* Adjust the size of the social media icons as required */
+    margin: 0 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Adjust styles for smaller screens as necessary */
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    #threeD-pipeline-container {
+      width: 80%; /* Full width on smaller screens */
+    }
+  
+    main {
+      min-height: calc(100vh - 120px); /* Adjust min-height for smaller header and footer */
+    }
+    
+    .cta-button {
+      padding: 10px 20px; /* Smaller padding on buttons for smaller screens */
+    }
+  }
+  
+  /* Additional styles for interactive elements if needed */
+  
