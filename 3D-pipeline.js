@@ -10,12 +10,22 @@ container.style.background = 'none'; // Ensure the container has no background
 container.style.border = 'none'; // Remove any border from the container
 container.appendChild(renderer.domElement);
 
-// Create an infinity loop path
+// Define an infinity loop shape (lemniscate of Bernoulli) using parametric equations
+function lemniscateOfBernoulli(t) {
+  const a = 5; // Scale of the lemniscate
+  const x = (a * Math.cos(t)) / (1 + Math.pow(Math.sin(t), 2));
+  const y = (a * Math.sin(t) * Math.cos(t)) / (1 + Math.pow(Math.sin(t), 2));
+  return new THREE.Vector3(x, y, 0);
+}
+
+// Create a path from the lemniscate points
 const curve = new THREE.CurvePath();
-const leftLoop = new THREE.EllipseCurve(0, 0, 5, 10, Math.PI, 3 * Math.PI, false, 0);
-const rightLoop = new THREE.EllipseCurve(0, 0, 5, 10, 0, 2 * Math.PI, false, 0);
-curve.add(new THREE.Path(leftLoop.getPoints(50)));
-curve.add(new THREE.Path(rightLoop.getPoints(50)));
+const points = [];
+for (let t = 0; t < 2 * Math.PI; t += 0.1) {
+  points.push(lemniscateOfBernoulli(t));
+}
+const lemniscatePath = new THREE.Path(points);
+curve.add(lemniscatePath);
 
 // Function to create a stage with specific parameters
 function createStage(color, position) {
@@ -28,14 +38,14 @@ function createStage(color, position) {
 }
 
 // Create the pipeline stages and position them along the curve
-const points = curve.getPoints(100);
-const stages = points.map((point, index) => {
-    const color = new THREE.Color(`hsl(${(index / points.length) * 360}, 100%, 50%)`);
-    return createStage(color, new THREE.Vector3(point.x, point.y, 0));
+points.forEach((point, index) => {
+    const hue = (index / points.length) * 360;
+    const color = new THREE.Color(`hsl(${hue}, 100%, 50%)`);
+    createStage(color, point);
 });
 
 // Adjust the camera position to view the entire shape
-camera.position.z = 30;
+camera.position.set(0, 0, 30);
 
 // Animation loop to rotate the object
 const animate = () => {
