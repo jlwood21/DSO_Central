@@ -10,7 +10,7 @@ container.style.background = 'none'; // Ensure the container has no background
 container.style.border = 'none'; // Remove any border from the container
 container.appendChild(renderer.domElement);
 
-// Define an infinity loop shape (lemniscate of Bernoulli) with a larger scale
+// Define an infinity loop shape (lemniscate of Bernoulli) with an increased scale
 function lemniscateOfBernoulli(t, a) {
   // The parameter t ranges from 0 to 2*PI, a is the scale of the lemniscate
   const x = (a * Math.cos(t)) / (1 + Math.pow(Math.sin(t), 2));
@@ -18,10 +18,10 @@ function lemniscateOfBernoulli(t, a) {
   return new THREE.Vector3(x, y, 0);
 }
 
-// Create a path from the lemniscate points with a larger size
+// Create a path from the lemniscate points with an increased size
 const curve = new THREE.CurvePath();
 const points = [];
-const scale = 20; // Double the scale for a larger infinity loop
+const scale = 30; // Increase the scale by 50% for a larger infinity loop
 for (let t = 0; t < 2 * Math.PI; t += 0.1) {
   points.push(lemniscateOfBernoulli(t, scale));
 }
@@ -45,8 +45,8 @@ points.forEach((point, index) => {
     createStage(color, point);
 });
 
-// Adjust the camera position to view the entire shape
-camera.position.set(0, 0, 60); // Adjust the z position if necessary to fit the larger loop
+// Adjust the camera position to ensure the larger shape fits within the view
+camera.position.set(0, 0, 90); // Adjust as needed for the best view of the larger shape
 
 // Animation loop to rotate the object
 const animate = () => {
