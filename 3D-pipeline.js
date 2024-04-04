@@ -21,7 +21,7 @@ function lemniscateOfBernoulli(t, a) {
 // Create a path from the lemniscate points with an increased size
 const curve = new THREE.CurvePath();
 const points = [];
-const scale = 50; // Adjusted scale for a larger and thicker infinity loop
+const scale = 30; // Increase the scale by 50% for a larger infinity loop
 for (let t = 0; t < 2 * Math.PI; t += 0.1) {
   points.push(lemniscateOfBernoulli(t, scale));
 }
@@ -46,7 +46,7 @@ points.forEach((point, index) => {
 });
 
 // Adjust the camera position to ensure the larger shape fits within the view
-camera.position.set(0, 0, 150); // Adjusted for a larger view
+camera.position.set(0, 0, 90); // Adjust as needed for the best view of the larger shape
 
 // Animation loop to rotate the object
 const animate = () => {
